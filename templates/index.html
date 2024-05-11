@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+    </style>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+</head>
+<body>
+    <div id="form-box">
+        <form method="post">
+            <h2>
+                {{date}}
+            </h2>
+            <label for="mm">Main Meter</label>
+            <input type="number" required name="mm">
+
+            <label for="motor">Motor Meter</label>
+            <input type="number" required name="motor">
+
+            <label for="slave">Slave Meter</label>
+            <input type="number" required name="slave">
+
+            <label for="bill">Bill</label>
+            <input type="number" required name="bill">
+
+            <button type="submit">calculate</button>
+            <div id="value">
+                    <span>Ground Floor {{G}}</span><br>
+                    <span>First Floor {{F}}</span>
+            </div>
+        </form>
+
+    </div>
+    <div id="tables">
+        <table>
+            <tr>
+                <th>Datw</th>
+                <th>Main Meter</th>
+                <th>Bill</th>
+                <th>Motor</th>
+                <th>Slave</th>
+                <th>Ground</th>
+                <th>First</th>
+              </tr>
+              
+                {%for i in tables %} 
+                <tr>
+                    <td class="c">{{i['date']}}</td>
+                    <td class="c">{{i['main-meter']}}</td>
+                    <td class="c">{{i['bill-rs']}}</td>
+                    <td class="c">{{i['motor']}}</td>
+                    <td class="c">{{i['slave']}}</td>
+                    <td class="ground">{{i['bill-ground']}}</td>
+                    <td class="first">{{i['bill-first']}}</td>
+                  </tr>
+                    
+                {%endfor%} 
+        </table>
+    </div>
+</body>
+</html>

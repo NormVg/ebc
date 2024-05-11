@@ -1,0 +1,146 @@
+body{
+    background-image: url("/static/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    color: whitesmoke;
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#form-box{
+    background-color: #4b4b4b52;
+    border: 1px whitesmoke solid;
+    border-radius: 15px;
+    width: 30vw;
+    padding: 10px;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    padding-bottom: 10px;
+}
+#form-box form{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 10px;
+
+}
+
+input ,label,h2{
+    margin-left: 10%;
+}
+button{
+    align-self: center;
+    background-color: #6C9DBA;
+    border: 1px black solid;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input{
+    background-color: #4b4b4bc7;
+    border: 1px whitesmoke solid;
+    border-radius: 5px;
+    height: 30px;
+    width: 80%;
+    color: whitesmoke;
+}
+
+h2{
+    color: #848484;
+    margin-bottom: 0%;
+}
+
+
+#value{
+    background-color: #6C9DBA;
+    border-radius: 10px;
+    align-self: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: black;
+    border: 1px black solid;
+}
+
+
+
+#tables{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #4b4b4b52;
+    border: 1px whitesmoke solid;
+    border-radius: 15px;
+    width: 75vw;
+    padding: 10px;
+    
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+#tables table th{
+    text-align: center;
+    padding-bottom: 15px;
+}
+#tables table td{
+    padding: 5px;
+    text-align: center;
+}
+#tables table{
+    
+    width: 100%;    
+    
+}
+
+.c{
+    color: #88C3EF;
+}
+.ground{
+    color: #E8638B;
+}
+
+.first{
+    color: #91F38F;
+}
+
+
+
+
+
+
+
+
+
+
+
+#tables::-webkit-scrollbar-track {
+    background:transparent;
+    
+  }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:grey;
+    /* border-radius: 10px; */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6C9DBA;
+    border-radius: 10px;
+  }
