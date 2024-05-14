@@ -146,7 +146,7 @@ h2{
   }
 
 
-@media (min-width:320px)  {
+@media only screen and (max-width: 480px){
     #form-box{
         
         width: 90vw;
