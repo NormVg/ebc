@@ -42,16 +42,17 @@ def cal(mm:int,motor:int,slave:int,bill:int):
     b = len(a)
     c = a[b-1]
 
-    mm = int(mm) - int(c['main-meter'])
-    motor = int(motor) - int(c['motor'])
-    slave = int(slave) - int(c['slave'])
+    mm = float(mm) - float(c['main-meter'])
+    motor = float(motor) - float(c['motor'])
+    slave = float(slave) - float(c['slave'])
 
     each_motor = motor/2
-
+    
     one = (mm - slave) - each_motor
-    two = slave - each_motor
+    # two =  slave - each_motor
+    
     ground = int((one/mm)*bill)
-    first = int((two/mm)*bill)
+    first = bill - ground # float((two/mm)*bill)
     
     return b,ground,first
 
